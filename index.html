@@ -47,13 +47,14 @@
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
-<body>
+<!-- Spying on the body to update the navbar -->
+<body data-spy="scroll" data-target="#navbar" data-offset="80">
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 
-  <div class="navbar navbar-fixed-top">
+  <div class="navbar navbar-fixed-top" id="navbar">
     <div class="navbar-inner">
       <div class="container">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -64,7 +65,19 @@
         <a class="brand" href="#">Sebastian Stadil</a>
         <div class="nav-collapse">
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li class="dropdown">
+			  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				Projects
+				<b class="caret"></b>
+			  </a>
+			  <ul class="dropdown-menu">
+			  	<li><a href="#scalr">Scalr</a></li>
+			  	<li><a href="#svccg">SVCCG</a></li>
+				<li class="divider"></li>
+			  	<li><a href="#other">Other</a></li>
+			  </ul>
+			</li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -76,30 +89,61 @@
   <div class="container">
 
     <!-- Main hero unit for a primary marketing message or call to action -->
-    <div class="hero-unit">
+    <div class="hero-unit" id="home">
       <h1>Welcome!</h1>
-      <p>This is my website. You'll find a list of projects I'm working on, and some other stuff. It was built using many awesome libraries: bootstrap (<a href="http://twitter.com/twitter">@twitter</a>), {less} (<a href="http://twitter.com/cloudhead">@cloudhead</a>), the html5 boilerplate (<a href="http://twitter.com/h5bp">@h5bp</a>), and knockout.js (<a href="https://github.com/SteveSanderson/knockout">SteveSanderson</a>).</p>
+      <p>This is my website. You'll find a list of projects I'm working on, and some other stuff. It was built using many awesome libraries: <a href="http://twitter.com/twitter">bootstrap</a> by @twitter, <a href="http://twitter.com/cloudhead">{less}</a> by @cloudhead, the <a href="http://twitter.com/h5bp">html5 boilerplate</a> by @h5bp, and <a href="https://github.com/SteveSanderson/knockout">knockout.js</a> by Steve Sanderson.</p>
       <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
     </div>
 
     <!-- Example row of columns -->
-    <div class="row">
+    <div class="row" id="projects">
       <div class="span4">
-        <h2>Scalr</h2>
+        <h2 id="scalr">Scalr</h2>
          <p>This is my startup. We build beautiful software to help you manage cloud infrastructure.</p>
+		 <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
         <p><a class="btn" href="http://scalr.com" rel="popover" title="Scalr" data-content="this will take you to the Scalr website<img src='https://stadil.s3.amazonaws.com/scalrwebsite.png' />">View details &raquo;</a></p>
       </div>
       <div class="span4">
-        <h2>Meetups</h2>
+        <h2 id="svccg">Meetups</h2>
          <p>This is a cloud computing user group I founded some time ago, which has grown to over 6,000 members. We hold monthly meetups of 200 people, and bi-annual conferences of 800.</p>
         <p><a class="btn" href="http://meetup.com/cloudcomputing">View details &raquo;</a></p>
      </div>
       <div class="span4">
-        <h2>Thoughts</h2>
+        <h2 id="other">Thoughts</h2>
         <p>I like to write. I used to do this on my <a href="http://blog.stadil.com">blog</a>, but now it's mostly <a href="http://quora.com/Sebastian-Stadil/">Quora</a>.</p>
         <p><a class="btn" href="http://quora.com/Sebastian-Stadil">View details &raquo;</a></p>
       </div>
     </div>
+
+    <hr>
+
+    <div class="row">
+	  <div class="span6">
+	    <h2 id="about">About</h2>
+	    <p>I'm your typical munchkin. I do my best to min-max everything I can, and applying this special know-how to Scalr. When not being a complete nerd, I run the Silicon Valley Cloud Computing Group, consisting of over 6,000 members who meet monthly to trade war stories from operating infrastructure.</p>
+	    <p>Prior to founding Scalr, I had a social life and enjoyed skiing, juggling, and getting my butt kicked playing rugby.</p>
+	  </div>
+	  <div class="span6">
+	  	<img src="http://stadil.s3.amazonaws.com/mask.jpg" />
+	  </div>
+	</div>
+
+    <hr>
+
+	<div class="row">
+	  <div class="span6">
+	    <img src="http://stadil.s3.amazonaws.com/sebastian.jpg" />
+	  </div>
+	  <div class="span6">
+	  	<h2 id="contact">Contact</h2>
+	    <p>One of the cool things about using Gmail is that you rarely get spam. So I can safely put my email address out in the open <a href="mailto:sebastian@stadil.com">sebastian@stadil.com</a>.</p>
+	    <p>You can also reach me via twitter <a href="http://twitter.com/sebastianstadil">@sebastianstadil</a>, and lately, <a href="http://quora.com/Sebastian-Stadil">on Quora</a>.</p>
+	    <p>I don't use facebook very much, but I like it. I'm <a href="http://facebook.com/sebastian.stadil">fb.com/sebastian.stadil</a> there.</p>
+	    <p>Finally, you can reach me via Skype at sebastian.stadil. See the pattern?</p>
+		<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+	  </div>
+	</div>
+
 
     <hr>
 

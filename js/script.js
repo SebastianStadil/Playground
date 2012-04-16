@@ -3,6 +3,8 @@
 */
 
 
-$("a[rel=popover]").popover()
+$("a[rel=popover]").popover();
+$('#navbar').scrollspy();
+$('.dropdown-toggle').dropdown();
 
 
