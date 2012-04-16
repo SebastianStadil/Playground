@@ -3,17 +3,17 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Instigator: Sebastian STADIL
+  Site: blog.stadil.com
+  Twitter: @sebastianstadil
+  Location: San Francisco, baby.
 
 /* THANKS */
   Names (& URL):
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
+  Components: Modernizr, jQuery, html5 boilerplate, {less}, bootstrap, and knockout.
   Software:
 
 
