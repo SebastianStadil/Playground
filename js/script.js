@@ -6,5 +6,6 @@
 $("a[rel=popover]").popover();
 $('#navbar').scrollspy();
 $('.dropdown-toggle').dropdown();
+$('.carousel').carousel();
 
 
