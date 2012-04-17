@@ -194,6 +194,27 @@
 
     <hr>
 
+    <div class="row">
+    	<div class="span4">
+    		<!-- This is a *view* - HTML markup that defines the appearance of your UI -->
+
+			<p>First name: <strong data-bind="text: firstName"></strong></p>
+			<p>Last name: <strong data-bind="text: lastName"></strong></p>
+
+			<p>First name: <input data-bind="value: firstName" /></p>
+			<p>Last name: <input data-bind="value: lastName" /></p>
+
+			<p>Your full name is <strong data-bind="text: fullName"></strong></p>
+
+			<button data-bind="click: capitalizeLastName">Go caps</button>
+    	</div>
+		<div class="span8">
+			Test
+		</div>
+    </div>
+
+    <hr>
+
     <footer>
       <p>&copy; Sebastian Stadil 2012</p>
     </footer>
@@ -211,16 +232,16 @@
   <!-- Le bootstrap -->
   <script src="js/libs/bootstrap.js"></script>
 
-  <!-- scripts concatenated and minified via build script -->
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
+  <!-- Script to add the knockout.js Model-View-ViewModel library -->
+  <script src='js/libs/knockout-2.0.0.js' type='text/javascript'></script>
 
   <!-- Script to render the {less} stylesheet -->
   <script src="js/libs/less.js" type="text/javascript"></script>
   <!-- end scripts -->
 
-  <!-- Script to add the knockout.js Model-View-ViewModel library -->
-  <script src='js/libs/knockout-2.0.0.js' type='text/javascript'></script>
+  <!-- scripts concatenated and minified via build script -->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
